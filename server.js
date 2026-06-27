@@ -20,7 +20,10 @@ app.use("/api/products", require("./routes/productRoutes"));
 app.use("/api/categories", require("./routes/categoryRoutes")); // ✅ FIXED
 app.use("/api/orders", require("./routes/orderRoutes"));
 const PORT = process.env.PORT || 5000;
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`Backend URL: http://localhost:${PORT}`);
+  console.log(`Products API: http://localhost:${PORT}/api/products`);
+  console.log(`Categories API: http://localhost:${PORT}/api/categories`);
+  console.log(`Orders API: http://localhost:${PORT}/api/orders`);
 });
